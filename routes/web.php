@@ -13,6 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/deals', function () {
+    return view('deals');
+})->name('deals');;
+
+// Add name() to the menu route
+Route::get('/menu', function () {
+    return view('menu');
+})->name('menu');  // This is the crucial change
+
+Route::get('/home', function () {
+    return view('home');
+})->name('deal');
+
+Route::get('/QR', function () {
+    return view('qr');
 });
